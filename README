@@ -5,4 +5,4 @@ To run, make sure mongodb is installed and running
 
 $ npm install -g n
 $ n 0.11.12
-$ node --harmony my-koa-app.js
+$ node --harmony app.js
