@@ -1,3 +1,8 @@
 # User CRUD Api using KoaJs
 This is a test API with a random delay on the response.
 
+To run, make sure mongodb is installed and running
+
+$ npm install -g n
+$ n 0.11.12
+$ node --harmony my-koa-app.js
