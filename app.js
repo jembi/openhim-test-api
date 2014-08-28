@@ -3,6 +3,7 @@ var app = module.exports = koa();
 var routes = require("koa-route");
 var fs = require("fs");
 var https = require("https");
+var httpPort = 3000;
 var httpsPort = 8081;
 
 // routes
@@ -13,7 +14,12 @@ app.use(routes.put("/user/:id", userRoutes.update));
 app.use(routes.del("/user/:id", userRoutes.remove));
 
 // Fire it up
-app.listen(3000);
+
+//listen on HTTP Port
+app.listen(httpPort);
+console.log("The app is listening. Port 3000");
+
+
 var options = {
     key: fs.readFileSync("tls/key.pem").toString(),
     cert: fs.readFileSync("tls/cert.pem").toString()
@@ -21,7 +27,9 @@ var options = {
 
 var httpsServer = https.createServer(options, app.callback());
 
+//listen on HTTPS Port
+
 httpsServer.listen(httpsPort, function() {
     console.log("HTTPS listening on port " + httpsPort);
 });
-console.log("The app is listening. Port 3000");
+
