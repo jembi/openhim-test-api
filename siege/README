@@ -8,7 +8,7 @@ $ apt-get install siege
 
 To run the siege bash script execute the command in the siege directory:
 $ ./siege_openhim.sh
-# e.g $ ./siege_openhim.sh --delay=1 --concurrent=1 --reps=20 --internet --verbose
+( e.g $ ./siege_openhim.sh --delay=1 --concurrent=1 --reps=20 --internet --verbose )
 
 Configuration Options
 =====================
