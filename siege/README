@@ -6,6 +6,8 @@ Installation and Testing
 To install siege execute the install command:
 $ apt-get install siege
 
+NB! Please remember to add/update/remove your desired URLs in the 'siege_url.txt' file
+
 To run the siege bash script execute the command in the siege directory:
 $ ./siege_openhim.sh
 ( e.g $ ./siege_openhim.sh --delay=1 --concurrent=1 --reps=20 --internet --verbose )
