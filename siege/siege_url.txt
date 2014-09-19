@@ -1,8 +1,0 @@
-# URLs to load test
-
-# GET Requests
-http://localhost:3000/user/5405b1f5b271c34915e16fc4
-
-# POST Requests
-http://localhost:3000/user/ POST < testData/newUser.json
-http://localhost:3000/user/ POST < testData/newUserBigData.json

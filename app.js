@@ -8,10 +8,10 @@ var httpsPort = 8081;
 
 // routes
 var userRoutes = require("./userRoutes.js");
-app.use(routes.post("/user", userRoutes.add));
-app.use(routes.get("/user/:id", userRoutes.get));
-app.use(routes.put("/user/:id", userRoutes.update));
-app.use(routes.del("/user/:id", userRoutes.remove));
+app.use(routes.post("/testPost", userRoutes.add));
+app.use(routes.get("/testGet", userRoutes.get));
+app.use(routes.get("/testGetNoDelay", userRoutes.getNoDelay));
+app.use(routes.get("/testGetFail", userRoutes.getFailing));
 
 // Fire it up
 
@@ -28,7 +28,6 @@ var options = {
 var httpsServer = https.createServer(options, app.callback());
 
 //listen on HTTPS Port
-
 httpsServer.listen(httpsPort, function() {
     console.log("HTTPS listening on port " + httpsPort);
 });
