@@ -14,7 +14,7 @@ app.use(routes.get("/testGetNoDelay", userRoutes.getNoDelay));
 app.use(routes.get("/testGetFail", userRoutes.getFailing));
 
 // multipart message test
-app.use(routes.post("/nowhere", userRoutes.nowhere));
+app.use(routes.post("/multipart", userRoutes.multipart));
 
 // Fire it up
 
