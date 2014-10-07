@@ -13,6 +13,9 @@ app.use(routes.get("/testGet", userRoutes.get));
 app.use(routes.get("/testGetNoDelay", userRoutes.getNoDelay));
 app.use(routes.get("/testGetFail", userRoutes.getFailing));
 
+// multipart message test
+app.use(routes.post("/nowhere", userRoutes.nowhere));
+
 // Fire it up
 
 //listen on HTTP Port
